@@ -1,1 +1,19 @@
+#1.Create List of Routes
+routes = ["North-1", "South-2", "East-3", "West-4", "North-5",
+          "Central-6", "Delta-7", "Hill-8", "River-9", "Coast-10"]
 
+#2.Append & Remove a discontinued one.
+routes.append("Express-11")
+routes.remove("West-4")
+
+#3.Sort and Reverse
+routes.sort()
+routes.reverse()
+
+#4.Count Routes Starting with "N"
+count_n = sum(1 for r in routes if r.startswith("N"))
+print("Routes starting with N:", count_n)
+
+#5.List Comprehension (Length > 10)
+long_routes = [r for r in routes if len(r) > 10]
+print(long_routes)
