@@ -1,1 +1,30 @@
+#1.Create Tuple (Name, Age, Blood Pressure, Heart Rate)
+patient = ("Ali Rafii", 35, "120/80", 72)
 
+#2.Access Age & Heart Rate
+print("Age:", patient[1])
+print("Heart Rate:", patient[3])
+
+#3.Explanation why tuples are suitable for storing patient vitals.
+#-Immutable: The recorded vitals cannot be accidentally altered, ensuring data integrity for medical records.
+#-Secure: Their immutability prevents tampering, securing sensitive patient data.
+#-Efficient in memory: They use less memory than lists, which is optimal for storing simple, fixed data.
+#-Suitable for Permanent medical records: They perfectly represent a fixed snapshot of a patient's state at a specific point in time.
+
+#4.Convert to List, Update & Reconvert
+patient_list = list(patient)
+patient_list[3] = 75
+patient = tuple(patient_list)
+print(patient)
+
+#5.Tuple of 5 Patients & Extract Names
+patients = (
+    ("Ali", 30, "120/80", 70),
+    ("Sara", 28, "110/70", 72),
+    ("David", 40, "130/85", 76),
+    ("Mary", 33, "115/75", 74),
+    ("Omar", 50, "140/90", 80)
+)
+
+names = [p[0] for p in patients]
+print(names)
