@@ -1,1 +1,25 @@
+#1.Create Dictionary with 5 products
+inventory = {
+    "Laptop": 15,
+    "Phone": 8,
+    "Tablet": 20,
+    "Headphones": 25,
+    "Charger": 5
+}
 
+#2.Add New Product & Update Quantity of Existing One
+inventory["Mouse"] = 30
+inventory["Phone"] = 12
+
+#3.Write a Function to Return Low Stock (Products < 10)
+def low_stock_products(inv):
+    return {k: v for k, v in inv.items() if v < 10}
+print(low_stock_products(inventory)
+
+#4.Delete Discontinued Product & Display Updated Dictionary
+del inventory["Charger"]
+print(inventory)
+
+#5.Loop Using .items() & Print each product with its quantity
+for product, quantity in inventory.items():
+    print(product, ":", quantity)
