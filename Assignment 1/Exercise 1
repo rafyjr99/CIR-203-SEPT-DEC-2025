@@ -1,1 +1,30 @@
+import numpy as np
+# 1. Create 2D array (4 branches × 6 months)
+transactions = np.array([
+    [1200, 1350, 1100, 1450, 1500, 1600],
+    [1000, 1050, 980, 1200, 1250, 1300],
+    [900, 970, 1020, 1100, 1150, 1200],
+    [1500, 1550, 1600, 1650, 1700, 1750]
+])
+print(transactions)
 
+# 2.Total Transactions Per Branch
+branch_totals = np.sum(transactions, axis=1)
+print(branch_totals
+
+# 3.Branch with Highest Transactions
+highest_branch = np.argmax(branch_totals) + 1
+print("Branch with highest transactions:", highest_branch)
+
+# 4.Average Monthly Transactions
+avg_monthly = np.mean(transactions)
+print("Average monthly transactions:", avg_monthly)
+
+# 5.Reshape to 3×8
+reshaped = transactions.reshape(3, 8)
+print(reshaped)
+
+#Explanation:
+# Reshaping changes the structure of the data without changing values.
+# The total number of elements must remain 24 (4×6 = 3×8).
+# This may affect how data is interpreted for analysis.
