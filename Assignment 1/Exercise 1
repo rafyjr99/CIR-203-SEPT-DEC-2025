@@ -1,4 +1,5 @@
 import numpy as np
+
 # 1. Create 2D array (4 branches × 6 months)
 transactions = np.array([
     [1200, 1350, 1100, 1450, 1500, 1600],
