@@ -10,7 +10,7 @@ print(transactions)
 
 # 2.Total Transactions Per Branch
 branch_totals = np.sum(transactions, axis=1)
-print(branch_totals
+print(branch_totals)
 
 # 3.Branch with Highest Transactions
 highest_branch = np.argmax(branch_totals) + 1
