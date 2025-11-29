@@ -14,7 +14,7 @@ inventory["Phone"] = 12
 #3.Write a Function to Return Low Stock (Products < 10)
 def low_stock_products(inv):
     return {k: v for k, v in inv.items() if v < 10}
-print(low_stock_products(inventory)
+print(low_stock_products(inventory))
 
 #4.Delete Discontinued Product & Display Updated Dictionary
 del inventory["Charger"]
